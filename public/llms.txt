@@ -1,0 +1,57 @@
+# אדמאיה — Generative Engine Optimization Map
+
+> A קייטרינג ואירוח business.
+
+---
+
+## Pages
+
+### דף הבית
+https://-8af8c085.zappy5.app
+אדמאיה מביאה לכם קייטרינג טבעוני לריטריטים עם חוויה קולינרית צבעונית ומזינה. התאימו את התפריט לאירוע שלכם עוד היום!
+
+### השירותים שלנו
+https://-8af8c085.zappy5.app/services
+גלו את מגוון שירותי הקייטרינג הטבעוני והצמחוני של אדמאיה לריטריטים, סדנאות ואירועים. תפריטים מותאמים אישית עם מרכיבים טבעיים.
+
+### אודות
+https://-8af8c085.zappy5.app/about
+הכירו את אדמאיה - הסיפור שלנו, הערכים שמנחים אותנו והמחויבות שלנו לקייטרינג טבעוני איכותי ומזין לריטריטים וסדנאות.
+
+### צור קשר
+https://-8af8c085.zappy5.app/contact
+צרו קשר עם אדמאיה לקבלת הצעת מחיר לקייטרינג טבעוני לריטריטים וסדנאות. נשמח לתכנן יחד איתכם את התפריט המושלם.
+
+## Legal & Policy
+
+### Privacy Policy
+https://-8af8c085.zappy5.app/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://-8af8c085.zappy5.app/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://-8af8c085.zappy5.app/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+# Business Context (for LLM understanding)
+
+## About אדמאיה
+אדמאיה is a business in the קייטרינג ואירוח industry.
+
+## Target Audience
+מנחי ריטריטים וסדנאות התפתחות, אנשים שמחזיקים מרחבים של ריפוי ואהבה
+
+## Industry
+קייטרינג ואירוח
+
+---
+
+# Additional Resources
+
+- **Sitemap**: https://-8af8c085.zappy5.app/sitemap.xml
+- **Robots.txt**: https://-8af8c085.zappy5.app/robots.txt

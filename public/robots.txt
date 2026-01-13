@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://admaya.zappy5.app/sitemap.xml
+Sitemap: https://adamaya-food.co.il/sitemap.xml

@@ -1,63 +1,53 @@
-# אדמאיה — Generative Engine Optimization Map
-
-> A קייטרינג ואירוח business.
+# Business — Generative Engine Optimization Map
 
 ---
 
 ## Pages
 
 ### חוויה קולינרית מיוחדת וצבעונית — אדמאיה
-https://admaya.zappy5.app
+https://adamaya-food.co.il
 אדמאיה מביאה לכם קייטרינג טבעוני לריטריטים עם חוויה קולינרית צבעונית ומזינה. התאימו את התפריט לאירוע שלכם עוד היום!
 
 ### הסיפור שלנו והערכים שלנו — אדמאיה
-https://admaya.zappy5.app/about
+https://adamaya-food.co.il/about
 הכירו את אדמאיה - הסיפור שלנו, הערכים שמנחים אותנו והמחויבות שלנו לקייטרינג טבעוני איכותי ומזין לריטריטים וסדנאות.
 
 ### קייטרינג טבעוני לריטריטים מותאם אישית — אדמאיה
-https://admaya.zappy5.app/private-retreats-and-events
+https://adamaya-food.co.il/private-retreats-and-events
 גלו את מגוון שירותי הקייטרינג הטבעוני והצמחוני של אדמאיה לריטריטים, סדנאות ואירועים. תפריטים מותאמים אישית עם מרכיבים טבעיים.
 
 ### Page
-https://admaya.zappy5.app/page-1768235592690
+https://adamaya-food.co.il/page-1768235592690
 
 ### Page
-https://admaya.zappy5.app/fermentation-workshops
+https://adamaya-food.co.il/fermentation-workshops
 
 ### צרו קשר עם אדמאיה — אדמאיה
-https://admaya.zappy5.app/contact
+https://adamaya-food.co.il/contact
 צרו קשר עם אדמאיה לקבלת הצעת מחיר לקייטרינג טבעוני לריטריטים וסדנאות. נשמח לתכנן יחד איתכם את התפריט המושלם.
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://admaya.zappy5.app/privacy
+https://adamaya-food.co.il/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://admaya.zappy5.app/terms
+https://adamaya-food.co.il/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://admaya.zappy5.app/accessibility
+https://adamaya-food.co.il/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About אדמאיה
-אדמאיה is a business in the קייטרינג ואירוח industry.
-
-## Target Audience
-מנחי ריטריטים וסדנאות התפתחות, אנשים שמחזיקים מרחבים של ריפוי ואהבה
-
-## Industry
-קייטרינג ואירוח
-
+## About Business
 ---
 
 # Additional Resources
 
-- **Sitemap**: https://admaya.zappy5.app/sitemap.xml
-- **Robots.txt**: https://admaya.zappy5.app/robots.txt
+- **Sitemap**: https://adamaya-food.co.il/sitemap.xml
+- **Robots.txt**: https://adamaya-food.co.il/robots.txt

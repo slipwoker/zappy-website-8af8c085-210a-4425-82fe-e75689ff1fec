@@ -1,57 +1,53 @@
-# אדמאיה — Generative Engine Optimization Map
-
-> A קייטרינג ואירוח business.
+# Business — Generative Engine Optimization Map
 
 ---
 
 ## Pages
 
-### דף הבית
-https://-8af8c085.zappy5.app
+### חוויה קולינרית מיוחדת וצבעונית — אדמאיה
+https://example.com
 אדמאיה מביאה לכם קייטרינג טבעוני לריטריטים עם חוויה קולינרית צבעונית ומזינה. התאימו את התפריט לאירוע שלכם עוד היום!
 
-### השירותים שלנו
-https://-8af8c085.zappy5.app/services
-גלו את מגוון שירותי הקייטרינג הטבעוני והצמחוני של אדמאיה לריטריטים, סדנאות ואירועים. תפריטים מותאמים אישית עם מרכיבים טבעיים.
-
-### אודות
-https://-8af8c085.zappy5.app/about
+### הסיפור שלנו והערכים שלנו — אדמאיה
+https://example.com/about
 הכירו את אדמאיה - הסיפור שלנו, הערכים שמנחים אותנו והמחויבות שלנו לקייטרינג טבעוני איכותי ומזין לריטריטים וסדנאות.
 
-### צור קשר
-https://-8af8c085.zappy5.app/contact
+### קייטרינג טבעוני לריטריטים מותאם אישית — אדמאיה
+https://example.com/private-retreats-and-events
+גלו את מגוון שירותי הקייטרינג הטבעוני והצמחוני של אדמאיה לריטריטים, סדנאות ואירועים. תפריטים מותאמים אישית עם מרכיבים טבעיים.
+
+### Page
+https://example.com/page-1768235592690
+
+### Page
+https://example.com/fermentation-workshops
+
+### צרו קשר עם אדמאיה — אדמאיה
+https://example.com/contact
 צרו קשר עם אדמאיה לקבלת הצעת מחיר לקייטרינג טבעוני לריטריטים וסדנאות. נשמח לתכנן יחד איתכם את התפריט המושלם.
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://-8af8c085.zappy5.app/privacy
+https://example.com/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://-8af8c085.zappy5.app/terms
+https://example.com/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://-8af8c085.zappy5.app/accessibility
+https://example.com/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About אדמאיה
-אדמאיה is a business in the קייטרינג ואירוח industry.
-
-## Target Audience
-מנחי ריטריטים וסדנאות התפתחות, אנשים שמחזיקים מרחבים של ריפוי ואהבה
-
-## Industry
-קייטרינג ואירוח
-
+## About Business
 ---
 
 # Additional Resources
 
-- **Sitemap**: https://-8af8c085.zappy5.app/sitemap.xml
-- **Robots.txt**: https://-8af8c085.zappy5.app/robots.txt
+- **Sitemap**: https://example.com/sitemap.xml
+- **Robots.txt**: https://example.com/robots.txt

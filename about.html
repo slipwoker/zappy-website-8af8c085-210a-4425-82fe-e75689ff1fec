@@ -62,11 +62,420 @@
   opacity: 0.7;
 }</style>
     <!-- Cookie Consent -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
-<!-- Zappy Analytics -->
+
+          <style id="zappy-cta-mobile-style">
+            /* Hide CTA list item on desktop (tablets and up) */
+            @media (min-width: 769px) {
+              .nav-cta-item-mobile {
+                display: none !important;
+              }
+            }
+            /* Show CTA list item on mobile */
+            @media (max-width: 768px) {
+              .nav-cta-item-mobile {
+                display: list-item !important;
+              }
+            }
+          </style>
+        
+          <style id="zappy-nested-menu-style">
+            /* Desktop only: vertically center nav items */
+            @media (min-width: 769px) {
+              .nav-menu,
+              #navMenu {
+                align-items: center !important;
+              }
+            }
+            
+            /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
+              display: inline-block !important;
+              padding: 0.5rem 1rem !important;
+              color: var(--nav-color) !important;
+              font-weight: 500 !important;
+              line-height: 1.7 !important;
+              cursor: default !important;
+              user-select: none !important;
+              vertical-align: middle !important;
+              text-decoration: none !important;
+              margin: 0 !important;
+              transition: color 0.3s ease !important;
+            }
+            
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
+              color: var(--nav-hover-color) !important;
+            }
+            
+            /* Desktop: show submenu on Menu Group hover */
+            li:has(.menu-group-title):hover > .sub-menu {
+              opacity: 1 !important;
+              visibility: visible !important;
+              transform: translateY(0) !important;
+              pointer-events: auto !important; /* Enable interaction when hovering */
+            }
+            
+            /* Hide menu items marked as hidden (overrides hover states) */
+            .zappy-hidden-menu-item,
+            li:has(.menu-group-title):hover > .sub-menu .zappy-hidden-menu-item {
+              display: none !important;
+              opacity: 0 !important;
+              visibility: hidden !important;
+              pointer-events: none !important;
+            }
+            
+            /* Keep submenu visible when hovering over the submenu itself */
+            .sub-menu:hover {
+              opacity: 1 !important;
+              visibility: visible !important;
+              pointer-events: auto !important;
+            }
+            
+            /* Nested dropdown menu styles - using more specific selectors */
+            .nav-menu .sub-menu,
+            nav .sub-menu,
+            .navbar .sub-menu {
+              display: block !important; /* Ensure submenu is in the DOM */
+              position: absolute !important;
+              top: 100%;
+              left: 0;
+              right: auto;
+              min-width: 200px;
+              background: white;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+              border-radius: 8px;
+              padding: 8px 0;
+              margin-top: 0px; /* Remove gap to prevent hover loss */
+              opacity: 0 !important;
+              visibility: hidden !important;
+              transform: translateY(-10px);
+              transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+              z-index: 1000;
+              list-style: none;
+              pointer-events: none; /* Prevent interaction when hidden */
+            }
+            
+            /* RTL (Hebrew/Arabic) submenu positioning - align to right instead of left */
+            [dir="rtl"] .nav-menu .sub-menu,
+            [dir="rtl"] nav .sub-menu,
+            [dir="rtl"] .navbar .sub-menu,
+            html[lang="he"] .nav-menu .sub-menu,
+            html[lang="he"] nav .sub-menu,
+            html[lang="he"] .navbar .sub-menu,
+            html[lang="ar"] .nav-menu .sub-menu,
+            html[lang="ar"] nav .sub-menu,
+            html[lang="ar"] .navbar .sub-menu {
+              left: auto;
+              right: 0;
+            }
+            
+            /* Show submenu on parent hover - more specific selectors */
+            .nav-menu li:hover > .sub-menu,
+            nav li:hover > .sub-menu,
+            .navbar li:hover > .sub-menu {
+              opacity: 1 !important;
+              visibility: visible !important;
+              transform: translateY(0) !important;
+              pointer-events: auto !important; /* Enable interaction when visible */
+            }
+            
+            /* Parent item must be relatively positioned */
+            .nav-menu li:has(.sub-menu),
+            nav li:has(.sub-menu),
+            .navbar li:has(.sub-menu) {
+              position: relative;
+            }
+            
+            /* Style for submenu items */
+            .sub-menu li {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+            }
+            
+            .sub-menu a,
+            .sub-menu .menu-group-title {
+              display: block !important;
+              padding: 10px 12px !important;
+              color: #333 !important;
+              font-weight: 600 !important;
+              text-decoration: none;
+              transition: background-color 0.2s;
+              white-space: nowrap;
+              cursor: default;
+            }
+            
+            .sub-menu a:hover {
+              background-color: #f5f5f5;
+            }
+            
+            /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
+              display: inline-block !important;
+              padding: 0.5rem 1rem !important;
+              color: var(--nav-color) !important;
+              font-weight: 500 !important;
+              line-height: 1.7 !important;
+              cursor: default !important;
+              user-select: none !important;
+              vertical-align: middle !important;
+              text-decoration: none !important;
+              margin: 0 !important;
+              transition: color 0.3s ease !important;
+            }
+            
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
+              color: var(--nav-hover-color) !important;
+              background-color: transparent !important;
+            }
+            
+            /* On mobile, show nested menus as expandable accordion */
+            @media (max-width: 768px) {
+              /* Mobile submenu styling */
+              .nav-menu .sub-menu,
+              nav .sub-menu,
+              .navbar .sub-menu {
+                position: static !important;
+                transform: none !important;
+                box-shadow: none !important;
+                background: transparent !important;
+                margin-top: 0 !important;
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                visibility: hidden;
+                transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
+                padding: 0 !important;
+                border-radius: 0 !important;
+              }
+              
+              /* Expanded state */
+              .sub-menu.mobile-expanded {
+                max-height: 500px !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                padding: 8px 0 8px 16px !important;
+              }
+              
+              /* RTL padding adjustment */
+              [dir="rtl"] .sub-menu.mobile-expanded,
+              html[lang="he"] .sub-menu.mobile-expanded,
+              html[lang="ar"] .sub-menu.mobile-expanded {
+                padding: 8px 16px 8px 0 !important;
+              }
+              
+              /* Disable hover behavior on mobile */
+              .nav-menu li:hover > .sub-menu,
+              nav li:hover > .sub-menu,
+              .navbar li:hover > .sub-menu {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+              }
+              
+              /* Enable visibility for expanded submenus */
+              .nav-menu li > .sub-menu.mobile-expanded,
+              nav li > .sub-menu.mobile-expanded,
+              .navbar li > .sub-menu.mobile-expanded {
+                opacity: 1 !important;
+                visibility: visible !important;
+                pointer-events: auto !important;
+              }
+              
+              .sub-menu a {
+                padding: 10px 0 !important;
+                display: block !important;
+                font-size: 14px !important;
+              }
+              
+              .sub-menu a:hover {
+                background-color: transparent !important;
+              }
+              
+              /* Parent item wrapper - flex layout for link + toggle */
+              .nav-menu li:has(.sub-menu),
+              nav li:has(.sub-menu),
+              .navbar li:has(.sub-menu) {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                align-items: center !important;
+              }
+              
+              /* Parent link - takes most space, allows navigation */
+              .nav-menu li:has(.sub-menu) > a,
+              nav li:has(.sub-menu) > a,
+              .navbar li:has(.sub-menu) > a,
+              .nav-menu > li > .menu-group-title,
+              #navMenu > li > .menu-group-title {
+                flex: 1 !important;
+              }
+              
+              /* Toggle arrow button - separate clickable area */
+              .mobile-submenu-toggle {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 44px !important;
+                height: 44px !important;
+                background: transparent !important;
+                border: none !important;
+                cursor: pointer !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                flex-shrink: 0 !important;
+                -webkit-tap-highlight-color: transparent;
+              }
+              
+              .mobile-submenu-toggle::after {
+                content: '' !important;
+                display: block !important;
+                width: 0 !important;
+                height: 0 !important;
+                border-left: 6px solid transparent !important;
+                border-right: 6px solid transparent !important;
+                border-top: 7px solid currentColor !important;
+                transition: transform 0.3s ease !important;
+              }
+              
+              /* Rotate arrow when expanded */
+              .mobile-submenu-toggle.expanded::after {
+                transform: rotate(180deg) !important;
+              }
+              
+              /* Submenu takes full width below parent */
+              .nav-menu li:has(.sub-menu) > .sub-menu,
+              nav li:has(.sub-menu) > .sub-menu,
+              .navbar li:has(.sub-menu) > .sub-menu {
+                flex-basis: 100% !important;
+                width: 100% !important;
+              }
+            }
+            
+            /* Hide toggle button on desktop */
+            @media (min-width: 769px) {
+              .mobile-submenu-toggle {
+                display: none !important;
+              }
+            }
+          </style>
+          
+          <script id="zappy-mobile-menu-script">
+            // Mobile menu toggle for nested submenus (including Menu Groups)
+            // Uses separate toggle button - link navigates, arrow toggles submenu
+            (function() {
+              function initMobileMenuToggles() {
+                // Only run on mobile
+                if (window.innerWidth > 768) {
+                  // Remove any toggle buttons on desktop
+                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn => btn.remove());
+                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
+                    menu.classList.remove('mobile-expanded');
+                  });
+                  console.log('[MOBILE MENU] Desktop mode - cleanup done');
+                  return;
+                }
+                
+                console.log('[MOBILE MENU] Initializing mobile menu toggles...');
+                
+                // Find all parent menu items (items with .sub-menu)
+                const menuItemsWithSubmenus = document.querySelectorAll(
+                  '.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)'
+                );
+                
+                console.log('[MOBILE MENU] Found', menuItemsWithSubmenus.length, 'items with submenus');
+                
+                menuItemsWithSubmenus.forEach(function(li) {
+                  // Skip if already has toggle button
+                  if (li.querySelector('.mobile-submenu-toggle')) {
+                    return;
+                  }
+                  
+                  const submenu = li.querySelector('.sub-menu');
+                  const parentLink = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title');
+                  
+                  if (!submenu || !parentLink) return;
+                  
+                  // Create toggle button
+                  const toggleBtn = document.createElement('button');
+                  toggleBtn.className = 'mobile-submenu-toggle';
+                  toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+                  toggleBtn.setAttribute('type', 'button');
+                  
+                  // Insert toggle button after the link
+                  parentLink.insertAdjacentElement('afterend', toggleBtn);
+                  
+                  console.log('[MOBILE MENU] Created toggle button for:', parentLink.textContent?.trim());
+                  
+                  // Handle toggle button click - only toggles submenu
+                  toggleBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const isExpanded = submenu.classList.contains('mobile-expanded');
+                    
+                    // Close all other submenus first
+                    document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+                      if (menu !== submenu) {
+                        menu.classList.remove('mobile-expanded');
+                        const otherToggle = menu.parentElement.querySelector('.mobile-submenu-toggle');
+                        if (otherToggle) otherToggle.classList.remove('expanded');
+                      }
+                    });
+                    
+                    // Toggle this submenu
+                    submenu.classList.toggle('mobile-expanded');
+                    toggleBtn.classList.toggle('expanded');
+                    
+                    console.log('[MOBILE MENU] Toggled submenu:', !isExpanded ? 'expanded' : 'collapsed');
+                  });
+                  
+                  // Parent link navigates normally - no preventDefault
+                });
+              }
+              
+              // Initialize on DOM load
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initMobileMenuToggles);
+              } else {
+                initMobileMenuToggles();
+              }
+              
+              // Re-initialize on window resize (but use debounce to avoid too many calls)
+              let resizeTimer;
+              window.addEventListener('resize', function() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(initMobileMenuToggles, 250);
+              });
+              
+              // Also initialize when mobile menu becomes visible
+              // This handles cases where the mobile menu is hidden initially
+              const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                  if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                    const target = mutation.target;
+                    if (target.classList.contains('active') || target.style.display !== 'none') {
+                      console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
+                      setTimeout(initMobileMenuToggles, 100);
+                    }
+                  }
+                });
+              });
+              
+              // Observe mobile menu containers
+              const mobileMenus = document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu');
+              mobileMenus.forEach(function(menu) {
+                observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
+              });
+            })();
+          </script>
+        <!-- Zappy Analytics -->
 <script>
 (function() {
   'use strict';
@@ -268,60 +677,19 @@
 })();
 </script>
 <!-- End Zappy Analytics -->
-
-    <style id="zappy-dropdown-submenu-styles">
-      /* ========== DESKTOP DROPDOWN SUBMENU STYLES ========== */
-      /* Base styles for dropdown submenus - parent must be positioned */
-      .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { position: relative; }
-      /* Submenu base - hidden by default */
-      .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { display: block !important; position: absolute !important; top: 100%; left: 0; min-width: 220px; background: white; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1000; list-style: none; pointer-events: none; }
-      /* CRITICAL: Desktop hover styles to show dropdown */
-      .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
-      /* Submenu item styling */
-      .sub-menu li { list-style: none; margin: 0; padding: 0; }
-      .sub-menu a { display: block !important; padding: 10px 16px !important; color: #333 !important; font-weight: 500; text-decoration: none; white-space: nowrap; transition: background-color 0.2s; }
-      .sub-menu a:hover { background-color: #f5f5f5; }
-      /* RTL (Hebrew/Arabic) dropdown positioning */
-      [dir="rtl"] .nav-menu .sub-menu, [dir="rtl"] nav .sub-menu, [dir="rtl"] .navbar .sub-menu, html[lang="he"] .nav-menu .sub-menu, html[lang="he"] nav .sub-menu, html[lang="he"] .navbar .sub-menu, html[lang="ar"] .nav-menu .sub-menu, html[lang="ar"] nav .sub-menu, html[lang="ar"] .navbar .sub-menu { left: auto !important; right: 0 !important; }
-      /* Hide empty dropdown menus */
-      .sub-menu:empty, .sub-menu:not(:has(li:not(.zappy-hidden-menu-item))), .sub-menu:not(:has(li)) { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
-      /* Desktop: show submenu on Menu Group hover */
-      li:has(.menu-group-title):hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
-      /* Menu Group title styling */
-      .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { display: inline-block; padding: 0.5rem 1rem; cursor: default; user-select: none; }
-      
-      /* ========== MOBILE SUBMENU STYLES ========== */
-      @media (max-width: 768px) {
-        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { position: static !important; transform: none !important; box-shadow: none !important; background: transparent !important; max-height: 0; overflow: hidden; opacity: 0; visibility: hidden; transition: max-height 0.3s ease, opacity 0.3s ease; padding: 0 !important; border-radius: 0 !important; }
-        .sub-menu.mobile-expanded { max-height: 500px !important; opacity: 1 !important; visibility: visible !important; padding: 8px 0 8px 16px !important; }
-        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded { padding: 8px 16px 8px 0 !important; }
-        /* Disable hover behavior on mobile */
-        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 0; visibility: hidden; pointer-events: none; }
-        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; }
-        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { display: flex !important; flex-wrap: wrap !important; align-items: center !important; }
-        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a { flex: 1 !important; }
-        .mobile-submenu-toggle { display: flex !important; align-items: center !important; justify-content: center !important; width: 44px !important; height: 44px !important; background: transparent !important; border: none !important; cursor: pointer !important; }
-        .mobile-submenu-toggle::after { content: '' !important; width: 0 !important; height: 0 !important; border-left: 6px solid transparent !important; border-right: 6px solid transparent !important; border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important; }
-        .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
-        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu { flex-basis: 100% !important; width: 100% !important; }
-        .sub-menu a { padding: 10px 0 !important; display: block !important; }
-        .nav-menu li:has(.sub-menu) > .menu-group-title, nav li:has(.sub-menu) > .menu-group-title, .navbar li:has(.sub-menu) > .menu-group-title, #navMenu li:has(.sub-menu) > .menu-group-title { flex: 1 !important; }
-      }
-      @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
-    </style>
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
 <!-- Zappy Attribution Header -->
 <div id="zappy-attribution-header" class="zappy-header" style="display: none;">
-  <p>Happily created by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" class="zappy-link">Zappy</a></p>
+  <p style="font-size: 22px;">Happily created by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" class="zappy-link">Zappy</a></p>
 </div>
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
       <div class="nav-brand">
         <a href="/" class="logo-link">
-          <img src="/assets/logo.webp" alt="אדמאיה" class="logo" />
+          <img src="/assets/logo.webp" alt="אדמאיה" class="logo">
         </a>
       </div>
       
@@ -340,10 +708,7 @@
         </svg>
       </button>
       
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="/services">השירותים שלנו</a></li>
-        <li><a href="/about">אודות</a></li>
-      </ul>
+      <ul class="nav-menu" id="navMenu"><li><a href="/about">אודות</a></li><li><a href="/private-retreats-and-events">ריטריטים ואירועים פרטיים</a></li><li><a href="/page-1768235592690" class="">חנות</a><ul class="sub-menu"></ul></li><li><a href="/fermentation-workshops" class="">סדנאות התססה</a></li><li class="nav-cta-item-mobile"><a href="/contact">צור קשר</a></li></ul>
       
       <div class="nav-cta-container">
         <li class="nav-cta-item">
@@ -355,98 +720,75 @@
 
   <section class="page-header">
     <div class="container">
-      <h1>הסיפור של אדמאיה</h1>
-      <h3>מסע של טעם, בריאות ואהבה לאוכל טבעוני</h3>
+      <h1>הסיפור שלי</h1>
+      
     </div>
   </section>
 
   <section class="story-section">
     <div class="container">
       <div class="story-content">
-        <h2>איך הכל התחיל</h2>
-        <p>אדמאיה נולדה מתוך אהבה עמוקה לאוכל טבעוני ומתוך הבינה שאוכל טוב יכול להיות כלי מרכזי בתהליכי ריפוי והתפתחות אישית. אנחנו התחלנו את הדרך שלנו כשהבנו שיש צורך אמיתי בקייטרינג טבעוני לריטריטים שמשלב איכות, טעם ומחויבות לערכים של בריאות וקיימות.</p>
-        <p>השם "אדמאיה" בא מהמילה "אדמה" - האדמה שממנה צומחים כל המרכיבים הטבעיים שאנחנו משתמשים בהם. אנחנו מאמינים בחיבור לטבע, בשימוש במרכיבים מקומיים ועונתיים, ובכבוד לאדמה שמספקת לנו את המזון שלנו.</p>
-        <p>לאורך השנים, אדמאיה הפכה לשם מוביל בתחום הקייטרינג הצמחוני והטבעוני לריטריטים וסדנאות התפתחות. אנחנו עובדים עם מנחים ומורים רוחניים, עם מרכזי ריפוי ועם אנשים שמחזיקים מרחבים של אהבה וצמיחה. כל אירוע שאנחנו משרתים הוא הזדמנות ליצור חוויה קולינרית שתומכת בתהליך שהמשתתפים עוברים.</p>
+        <h2 style="text-align: center">איך הכל התחיל</h2>
+        <p style="font-size: 22px; text-align: center"><span></span></p><div class="text-base my-auto mx-auto pb-10 [--thread-content-margin:--spacing(4)] @w-sm/main:[--thread-content-margin:--spacing(6)] @w-lg/main:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"><div class="[--thread-content-max-width:40rem] @w-lg/main:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn" tabindex="-1"><div class="flex max-w-full flex-col grow"><div data-message-author-role="assistant" data-message-id="c8a60f99-3878-4b62-a7a3-e0fc3c9f97bb" dir="auto" class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-1" data-message-model-slug="gpt-5-2"><div class="flex w-full flex-col gap-1 empty:hidden first:pt-[1px]"><div class="markdown prose dark:prose-invert w-full break-words light markdown-new-styling"><span data-start="256" data-end="266" style="">אדמאיה</span> נולד מתוך חיבור עמוק ואהבה ענקית לאוכל, לאנשים ולחיבור בין השניים.<br>בעבר עבדתי כקונדיטורית במסעדות, אבל עם הזמן הרגשתי שמשהו שם כבר לא עובד לי- הקצב, הסטרס והעבודה עם חומרי גלם שלא מתאימים לי, כמו סוכר וגלוטן, חומרים שאפילו לא יכולתי לאכול בעצמי<br>באיזשהו שלב עלתה בי תחושת בטן מאוד ברורה - לעצור, לשחרר את עולם הקונדיטוריה ולצאת לחיפוש מחדש.<br data-start="497" data-end="500">
+חיפשתי דרך להמשיך לעבוד עם אוכל, אבל ממקום שמרגיש נעים ונאמן למה שאני רוצה להביא לעולם.<br>ככה מצאתי את הדרך שלי:<br data-start="617" data-end="620">
+לבשל אוכל שמזין, שמכבד את הגוף, ושעדיין מרגש.<br data-start="665" data-end="668">
+אוכל שמוכיח שבריא לא חייב להיות משעמם - הוא יכול להיות צבעוני, מיוחד, מלא טעם ושמחה.<br>המטרה שלי היא להזכיר שדאגה לעצמנו היא לא מותרות ולא בושה, אלא חלק טבעי מהחיים./div&gt;</div></div></div></div></div>
+        <p style="font-size: 22px;">השם <span data-start="88" data-end="98" style="">אדמאיה</span> נולד מהמילה <span data-start="111" data-end="117">אדמה</span> - המקום שממנו הכול מתחיל.<br data-start="143" data-end="146">
+האדמה שמזינה, מצמיחה ומחברת אותנו חזרה לפשוט ולבסיסי.<br>החיבור לטבע עומד בלב העשייה שלי - שימוש במרכיבים מקומיים ועונתיים, הקשבה למחזוריות של האדמה, וכבוד למה שהיא מעניקה לנו.<br></p>
+        <p style="font-size: 22px;">היום אני עובדת עם מנחים ומורים רוחניים, עם מרכזי ריפוי ועם אנשים מעוררי השראה&nbsp;<br>אני מודה על הזכות להיות חלק ממרחבים מרפאים, לתת הזנה בריאה ונעימה<br>ולפגוש אנשים מיוחדים ומדהימים</p>
       </div>
     </div>
-  </section>
+  </div></section>
 
   <section class="values-section">
     <div class="container">
-      <h2>הערכים שמנחים אותנו</h2>
+      <h2>הערכים שמנחים אותי</h2>
       <div class="values-grid">
         <div class="value-card">
           <i class="fas fa-heart"></i>
           <h3>אהבה ומסירות</h3>
-          <p>כל מנה שאנחנו מכינים נעשית באהבה ובמסירות. אנחנו לא רק מבשלים אוכל, אנחנו יוצרים חוויה שמזינה את הגוף והנפש. הקייטרינג הטבעוני שלנו הוא ביטוי של האהבה שלנו למה שאנחנו עושים.</p>
+          <p style="font-size: 22px;">כל מנה שאני מכינה נעשית באהבה. אני שמה את הלב שלי על השולחן.<br>התשוקה, האהבה והיצירתיות שלי מתבטאת באוכל שאני עושה<br>אני כל הזמן מגוונת לפי השגעונות שלי ואני ככ נהנת מזה</p>
         </div>
         <div class="value-card">
           <i class="fas fa-leaf"></i>
-          <h3>קיימות וכבוד לטבע</h3>
-          <p>אנחנו מחויבים לעבוד בצורה קיימת ואחראית. אדמאיה משתמשת במרכיבים מקומיים ועונתיים, מקפידה על צמצום פסולת, ועובדת עם חקלאים שמכבדים את האדמה. הקייטרינג הבריא שלנו טוב לכם וטוב לכדור הארץ.</p>
+          <h3>כבוד לטבע</h3>
+          <p style="font-size: 22px;">אני עובדת עם חומרי גלם מקומיים ולפי עונה<br>מקפידה על צמצום בזבוז מזון, משתדלת להשתמש בכל חלקי הירקות/הפירות<br>ובעיקר לעבוד בצורה שמיטיבה עם כדור הארץ&nbsp;<br>והארץ שלנו בפרט<br></p>
         </div>
         <div class="value-card">
           <i class="fas fa-users"></i>
           <h3>קהילה וחיבור</h3>
-          <p>אנחנו מאמינים שאוכל משותף יוצר קהילה. הקייטרינג הצמחוני שלנו מעודד שיתוף, שיחה וחיבור בין המשתתפים. כל ארוחה היא הזדמנות להתחבר זה לזה ולחוויה המשותפת.</p>
+          <p style="font-size: 22px;">&nbsp; אני מאמינה שלאוכל יש יכולת לחבר.<br data-start="313" data-end="316">
+ברגעים הפשוטים של ישיבה משותפת ואכילה, נוצר מקום לשיחה, לקרבה ולהיכרות אמיתית.&nbsp;&nbsp;</p>
         </div>
         <div class="value-card">
           <i class="fas fa-spa"></i>
           <h3>תמיכה בתהליכי ריפוי</h3>
-          <p>אנחנו מבינים שהאוכל שאנחנו מספקים הוא חלק מתהליך גדול יותר. אדמאיה מתאימה את התפריט כך שיתמוך בתהליכי הריפוי וההתפתחות האישית שהמשתתפים עוברים בריטריט או בסדנה.</p>
+          <p style="font-size: 22px;">בריטריטים האוכל לא עומד בפני עצמו - הוא מלווה, תומך ומחזיק את מה שהמשתתפים עוברים בדרך.<br>אני מתאימה את התפריט למה שקורה במרחב, מתוך הקשבה לתהליך, לקצב ולצרכים שעולים, כדי שהאוכל יהיה שם ברקע - מחזק, מזין ומאפשר.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="philosophy-section">
-    <div class="container">
-      <h2>הפילוסופיה הקולינרית שלנו</h2>
-      <div class="philosophy-content">
-        <p>בליבה של אדמאיה עומדת האמונה שאוכל טוב הוא פשוט. אנחנו לא צריכים מרכיבים מסובכים או טכניקות מתוחכמות כדי ליצור ארוחות מדהימות. מה שאנחנו צריכים זה מרכיבים טריים ואיכותיים, הבנה של הטעמים והטקסטורות, והרבה אהבה.</p>
-        <p>הקייטרינג הטבעוני לריטריטים שלנו מבוסס על עקרונות של תזונה מאוזנת. אנחנו מקפידים על שילוב נכון של חלבונים צמחיים, פחמימות מורכבות, שומנים בריאים וירקות עשירים בויטמינים ומינרלים. כל ארוחה מתוכננת כך שתספק אנרגיה יציבה לאורך היום, תתמוך בריכוז ותעזור למשתתפים להרגיש טוב.</p>
-        <p>אנחנו גם מאמינים בכוח של האוכל המקומי והעונתי. כשאנחנו משתמשים במרכיבים שגדלים באזור ובעונה, אנחנו מקבלים טעם עשיר יותר, ערך תזונתי גבוה יותר, ואנחנו תומכים בחקלאות המקומית. זה גם אומר שהתפריט שלנו משתנה עם העונות, ומציע כל פעם משהו חדש ומרגש.</p>
+  
+
+  
+
+  
+
+  
+
+  <section class="story-section" id="zappy-section-1">
+    <div class="container"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDMyMCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjMyMCIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFOEU4RTgiLz48cmVjdCB4PSIzMCIgeT0iMTUiIHdpZHRoPSIyNjAiIGhlaWdodD0iMTUwIiByeD0iNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOUU5RTlFIiBzdHJva2Utd2lkdGg9IjQiLz48Y2lyY2xlIGN4PSI3NSIgY3k9IjUwIiByPSIxNSIgZmlsbD0iIzlFOUU5RSIvPjxwYXRoIGQ9Ik03NSAxMDAgTDEwNSA3MCBMMTM1IDkwIEwxNTAgNzUgTDE4MCA5MCBMMjI1IDUwIEwyNzUgODAgTDI3NSAxNTAgTDQ1IDE1MCBMNDUgMTE1IFoiIGZpbGw9IiNCMEIwQjAiLz48cGF0aCBkPSJNMTM1IDkwIEwxNTAgNzUgTDE4MCA5MCBMMjI1IDUwIEwyNzUgODAgTDI3NSAxNTAgTDEzNSAxNTAgWiIgZmlsbD0iIzlFOUU5RSIvPjwvc3ZnPg==" alt="Image" style="width: 320px; height: 180px; border-radius: 8px; max-width: 100%; object-fit: cover; margin: 10px auto; position: relative; cursor: pointer !important; display: block;" data-element-type="image" data-element-id="zappy-element-1768242577436-9rlj354rs" id="zappy-element-1768242577436-9rlj354rs" class="zappy-editable-image" data-original-position="static">
+      <div class="story-content">
+        <h2 class="" style="text-align: center;">איך הכל התחיל</h2>
+        <div class="flex flex-col text-sm pb-25"><div class="text-base my-auto mx-auto pb-10 [--thread-content-margin:--spacing(4)] @w-sm/main:[--thread-content-margin:--spacing(6)] @w-lg/main:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)"><div class="[--thread-content-max-width:40rem] @w-lg/main:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn" tabindex="-1"><div class="flex max-w-full flex-col grow"><div data-message-author-role="assistant" data-message-id="c8a60f99-3878-4b62-a7a3-e0fc3c9f97bb" dir="auto" class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-1" data-message-model-slug="gpt-5-2"><div class="flex w-full flex-col gap-1 empty:hidden first:pt-[1px]"><div class="markdown prose dark:prose-invert w-full break-words light markdown-new-styling" style=""><span data-start="256" data-end="266" style="">אדמאיה</span> נולד מתוך חיבור עמוק ואהבה ענקית לאוכל, לאנשים ולחיבור בין השניים.<br>בעבר עבדתי כקונדיטורית במסעדות, אבל עם הזמן הרגשתי שמשהו שם כבר לא עובד לי- הקצב, הסטרס והעבודה עם חומרי גלם שלא מתאימים לי, כמו סוכר וגלוטן, חומרים שאפילו לא יכולתי לאכול בעצמי<br>באיזשהו שלב עלתה בי תחושת בטן מאוד ברורה - לעצור, לשחרר את עולם הקונדיטוריה ולצאת לחיפוש מחדש.<br data-start="497" data-end="500">
+חיפשתי דרך להמשיך לעבוד עם אוכל, אבל ממקום שמרגיש נעים ונאמן למה שאני רוצה להביא לעולם.<br>ככה מצאתי את הדרך שלי:<br data-start="617" data-end="620">
+לבשל אוכל שמזין, שמכבד את הגוף, ושעדיין מרגש.<br data-start="665" data-end="668">
+אוכל שמוכיח שבריא לא חייב להיות משעמם - הוא יכול להיות צבעוני, מיוחד, מלא טעם ושמחה.<br>המטרה שלי היא להזכיר שדאגה לעצמנו היא לא מותרות ולא בושה, אלא חלק טבעי מהחיים.<br><div class="z-0 flex min-h-[46px] justify-start"><div class="mt-3 w-full empty:hidden"><div class="text-center"><div aria-hidden="true" data-edge="true" class="pointer-events-none h-px w-px absolute bottom-0"></div></div></div></div></div></div></div></div></div></div></div>
+        <p style="font-size: 22px; text-align: center;" class="">השם <span data-start="88" data-end="98" style="">אדמאיה</span> נולד מהמילה <span data-start="111" data-end="117">אדמה</span> - המקום שממנו הכול מתחיל.<br data-start="143" data-end="146">
+האדמה שמזינה, מצמיחה ומחברת אותנו חזרה לפשוט ולבסיסי.<br>החיבור לטבע עומד בלב העשייה שלי - שימוש במרכיבים מקומיים ועונתיים, הקשבה למחזוריות של האדמה, וכבוד למה שהיא מעניקה לנו.<br></p>
+        <p style="font-size: 22px; text-align: center;" class="">היום אני עובדת עם מנחים ומורים רוחניים, עם מרכזי ריפוי ועם אנשים מעוררי השראה&nbsp;<br>אני מודה על הזכות להיות חלק ממרחבים מרפאים, לתת הזנה בריאה ונעימה<br>ולפגוש אנשים מיוחדים ומדהימים</p>
       </div>
-    </div>
-  </section>
-
-  <section class="team-section">
-    <div class="container">
-      <h2>הצוות שלנו</h2>
-      <p class="team-intro">אדמאיה היא קבוצה של אנשים שאוהבים את מה שהם עושים. כל אחד מאיתנו מביא את הניסיון, את הכישורים ואת האהבה שלו למטבח הטבעוני. אנחנו עובדים ביחד כדי ליצור חוויות קולינריות שמשאירות רושם.</p>
-      <p class="team-intro">הצוות שלנו כולל שפים מנוסים שעבדו במסעדות טבעוניות מובילות, תזונאים שמבינים את הצרכים התזונתיים של המשתתפים, ואנשי שירות שדואגים שכל פרט יהיה מושלם. כולנו משתפים את החזון של אדמאיה - ליצור קייטרינג צמחוני שהוא לא רק טעים, אלא גם מזין, יפה ומלא באהבה.</p>
-    </div>
-  </section>
-
-  <section class="commitment-section">
-    <div class="container">
-      <h2>המחויבות שלנו אליכם</h2>
-      <div class="commitment-grid">
-        <div class="commitment-item">
-          <h3>איכות ללא פשרות</h3>
-          <p>אנחנו מקפידים על איכות גבוהה בכל שלב - מבחירת המרכיבים ועד ההגשה הסופית. קייטרינג בריא לאירועים שעומד בסטנדרטים הכי גבוהים.</p>
-        </div>
-        <div class="commitment-item">
-          <h3>שקיפות מלאה</h3>
-          <p>אנחנו תמיד פתוחים לשאלות ולבקשות מיוחדות. אתם יכולים לדעת בדיוק מה יש באוכל שלכם, מאיפה זה מגיע ואיך זה הוכן.</p>
-        </div>
-        <div class="commitment-item">
-          <h3>התאמה אישית</h3>
-          <p>כל אירוע הוא ייחודי, וכך גם התפריט שלו. אדמאיה מתאימה את הקייטרינג הטבעוני בדיוק לצרכים שלכם, ללא פשרות.</p>
-        </div>
-        <div class="commitment-item">
-          <h3>שירות מסור</h3>
-          <p>אנחנו כאן בשבילכם לפני, במהלך ואחרי האירוע. הצוות שלנו מקפיד על שירות מצוין ועל תקשורת פתוחה וברורה.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-section">
-    <div class="container">
-      <h2>מוכנים להכיר אותנו מקרוב?</h2>
-      <p>נשמח לשמוע על האירוע שלכם ולספר לכם עוד על אדמאיה והקייטרינג הטבעוני שלנו</p>
-      <a href="/contact" class="btn-primary">צרו קשר</a>
     </div>
   </section>
 
@@ -460,7 +802,7 @@
       <div class="container">
         <div class="footer-main">
           <div class="all-rights-reserved">
-            <p>© 2026 אדמאיה. כל הזכויות שמורות.</p>
+            <p style="font-size: 22px;">© 2026 אדמאיה. כל הזכויות שמורות.</p>
           </div>
           <div class="footer-social"><a href="https://facebook.com/[facebook_handle]" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
 <a href="https://instagram.com/[instagram_handle]" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -480,7 +822,7 @@
           </div>
         </div>
         <div class="zappy-attribution">
-          <p>נוצר באמצעות&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Zappy</a></p>
+          <p style="font-size: 22px;">נוצר באמצעות&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Zappy</a></p>
         </div>
       </div>
     </footer>

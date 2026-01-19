@@ -1,6 +1,4 @@
-# אדמאיה — Generative Engine Optimization Map
-
-> A קייטרינג ואירוח business.
+# Business — Generative Engine Optimization Map
 
 ---
 
@@ -10,19 +8,24 @@
 https://adamaya-food.co.il
 אדמאיה מביאה לכם קייטרינג טבעוני לריטריטים עם חוויה קולינרית צבעונית ומזינה. התאימו את התפריט לאירוע שלכם עוד היום!
 
-### הסיפור שלנו והערכים שלנו — אדמאיה
-https://adamaya-food.co.il/about
-הכירו את אדמאיה - הסיפור שלנו, הערכים שמנחים אותנו והמחויבות שלנו לקייטרינג טבעוני איכותי ומזין לריטריטים וסדנאות.
+### תפריט ומחירים - אדמאיה
+https://adamaya-food.co.il/shop
+תפריט עונתי של אדמאיה - קייטרינג טבעוני לריטריטים וסדנאות. מגוון מנות בריאות, מזינות וצבעוניות המוכנות באהבה. צפו במחירים ובאפשרויות האירוח.
 
 ### קייטרינג טבעוני לריטריטים מותאם אישית — אדמאיה
-https://adamaya-food.co.il/private-retreats-and-events
+https://adamaya-food.co.il/retreats
 גלו את מגוון שירותי הקייטרינג הטבעוני והצמחוני של אדמאיה לריטריטים, סדנאות ואירועים. תפריטים מותאמים אישית עם מרכיבים טבעיים.
 
-### Page
-https://adamaya-food.co.il/page-1768235592690
+### אירועים פרטיים - אדמאיה קייטרינג ואירוח
+https://adamaya-food.co.il/private-events
+אדמאיה מציעה שירותי קייטרינג טבעוני לאירועים פרטיים. חתונות קטנות, ימי הולדת ומפגשים משפחתיים עם אוכל בריא, טרי ומושקע שנעשה באהבה.
 
 ### Page
 https://adamaya-food.co.il/fermentation-workshops
+
+### הסיפור שלנו והערכים שלנו — אדמאיה
+https://adamaya-food.co.il/about
+הכירו את אדמאיה - הסיפור שלנו, הערכים שמנחים אותנו והמחויבות שלנו לקייטרינג טבעוני איכותי ומזין לריטריטים וסדנאות.
 
 ### צרו קשר עם אדמאיה — אדמאיה
 https://adamaya-food.co.il/contact
@@ -46,15 +49,7 @@ Information about WCAG compliance and accessibility features.
 
 # Business Context (for LLM understanding)
 
-## About אדמאיה
-אדמאיה is a business in the קייטרינג ואירוח industry.
-
-## Target Audience
-מנחי ריטריטים וסדנאות התפתחות, אנשים שמחזיקים מרחבים של ריפוי ואהבה
-
-## Industry
-קייטרינג ואירוח
-
+## About Business
 ---
 
 # Additional Resources

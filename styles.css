@@ -79,7 +79,7 @@ body {
   font-family: 'Varela Round', sans-serif;
   line-height: 1.7;
   color: #2c1810;
-  background: #faf8f5;
+  background: #FFF0E0;
 }
 
 img {
@@ -89,19 +89,23 @@ img {
 }
 
 :root {
-  --primary-color: #8b6f47;
+--primary-color: #FFF0E0;
   --secondary-color: #d4a574;
   --accent-color: #7a9b76;
-  --bg-white: #faf8f5;
-  --text-color: #2c1810;
+  --bg-white: #d4a574;
+  --text-color: #4A4A4A;
   --text-light: #5a4a3a;
   --nav-color: #2c1810;
-  --nav-hover-color: #8b6f47;
+  --nav-hover-color: #FFF0E0;
   --shadow: 0 2px 10px rgba(0,0,0,0.1);
 
   --heading-font: 'Varela Round', sans-serif;
   --body-font: 'Varela Round', sans-serif;
-  --font-family: 'Varela Round', sans-serif;}
+  --font-family: 'Varela Round', sans-serif;
+  --background-color: #d4a574;
+  --surface-color: #F9FAFB;
+  --text-secondary-color: #8C8C8C;
+}
 
 .container {
   max-width: 1440px;
@@ -110,7 +114,7 @@ img {
 }
 
 .navbar {
-  background: #faf8f5;
+  background: #FFF0E0;
   padding: 20px 0;
   position: sticky;
   top: 0;
@@ -214,8 +218,8 @@ img {
 }
 
 .nav-cta-btn:hover {
-  background: #6d5635;
-  border-color: #6d5635;
+  background: #FFF0E0;
+  border-color: #FFF0E0;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(139, 111, 71, 0.3);
 }
@@ -376,8 +380,8 @@ small,
 }
 
 .btn-primary:hover {
-  background: #6d5635;
-  border-color: #6d5635;
+  background: #FFF0E0;
+  border-color: #FFF0E0;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(139, 111, 71, 0.4);
 }
@@ -423,7 +427,7 @@ section {
 }
 
 .page-header {
-  background: linear-gradient(135deg, #8b6f47 0%, #7a9b76 100%);
+  background: linear-gradient(135deg, #FFF0E0 0%, #7a9b76 100%);
   padding: 60px 40px;
   text-align: center;
 }
@@ -452,7 +456,7 @@ section {
 .value-card,
 .commitment-item,
 .faq-item {
-  background: #ffffff;
+  background: #F9FAFB;
   padding: 24px;
   border-radius: 12px;
   box-shadow: var(--shadow);
@@ -500,7 +504,7 @@ section {
 }
 
 .testimonial-card {
-  background: #ffffff;
+  background: #F9FAFB;
   padding: 32px;
   border-radius: 12px;
   box-shadow: var(--shadow);
@@ -526,7 +530,7 @@ section {
 }
 
 .cta-section {
-  background: linear-gradient(135deg, #7a9b76 0%, #8b6f47 100%);
+  background: linear-gradient(135deg, #7a9b76 0%, #FFF0E0 100%);
   text-align: center;
   padding: 80px 40px;
 }
@@ -538,14 +542,14 @@ section {
   font-size: 22px;}
 
 .cta-section .btn-primary {
-  background: #ffffff;
+  background: #F9FAFB;
   color: var(--primary-color);
   border-color: #ffffff;
   margin-top: 1rem;
 }
 
 .cta-section .btn-primary:hover {
-  background: #f0f0f0;
+  background: #F9FAFB;
   border-color: #f0f0f0;
 }
 
@@ -612,7 +616,7 @@ section {
 }
 
 .contact-info {
-  background: #ffffff;
+  background: #FFF0E0;
   padding: 32px;
   border-radius: 12px;
   box-shadow: var(--shadow);
@@ -653,7 +657,7 @@ section {
 }
 
 .contact-form-container {
-  background: #ffffff;
+  background: #FFF0E0;
   padding: 32px;
   border-radius: 12px;
   box-shadow: var(--shadow);
@@ -1026,7 +1030,7 @@ img, picture, figure {
 
     /* Legal Footer Styles - Header Colors */
     .legal-footer {
-      background-color: #f2f2f2;
+      background-color: #FFF0E0;
       color: #1a1a1a;
       padding: 20px 0;
       font-size: 16px;
@@ -1243,8 +1247,8 @@ img, picture, figure {
 
 /* Cookie Consent Customizations */
 :root {
-  --cc-btn-primary-bg: #3b82f6;
-  --cc-btn-primary-border: #3b82f6;
+  --cc-btn-primary-bg: #d4a574;
+  --cc-btn-primary-border: #d4a574;
   --cc-btn-primary-hover-bg: #2269dd;
 }
 
@@ -1434,7 +1438,7 @@ img, picture, figure {
 .mic-access-tool-box-header,
 div[id*="mic-access-tool-box"] header,
 div[id*="mic-access-tool-box"] .header {
-  background: #f2f2f2 !important;
+  background: #FFF0E0 !important;
   color: white !important;
 }
 
@@ -1471,7 +1475,7 @@ div[id*="mic-access-tool-box"] button:hover {
 #mic-access-tool-box button[title*="Reset"],
 #mic-access-tool-box [class*="reset"],
 div[id*="mic-access-tool-box"] button[class*="reset"] {
-  background: #f2f2f2 !important;
+  background: #FFF0E0 !important;
   color: white !important;
 }
 
@@ -2013,7 +2017,7 @@ body {
   font-family: 'Varela Round', sans-serif;
   line-height: 1.7;
   color: #2c1810;
-  background: #faf8f5;
+  background: #FFF0E0;
 }
 
 img {
@@ -2023,14 +2027,14 @@ img {
 }
 
 :root {
-  --primary-color: #8b6f47;
+  --primary-color: #FFF0E0;
   --secondary-color: #d4a574;
   --accent-color: #7a9b76;
-  --bg-white: #faf8f5;
-  --text-color: #2c1810;
+  --bg-white: #d4a574;
+  --text-color: #4A4A4A;
   --text-light: #5a4a3a;
   --nav-color: #2c1810;
-  --nav-hover-color: #8b6f47;
+  --nav-hover-color: #FFF0E0;
   --shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
@@ -2041,7 +2045,7 @@ img {
 }
 
 .navbar {
-  background: #faf8f5;
+  background: #FFF0E0;
   padding: 20px 0;
   position: sticky;
   top: 0;
@@ -2145,8 +2149,8 @@ img {
 }
 
 .nav-cta-btn:hover {
-  background: #6d5635;
-  border-color: #6d5635;
+  background: #FFF0E0;
+  border-color: #FFF0E0;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(139, 111, 71, 0.3);
 }
@@ -2307,8 +2311,8 @@ small,
 }
 
 .btn-primary:hover {
-  background: #6d5635;
-  border-color: #6d5635;
+  background: #FFF0E0;
+  border-color: #FFF0E0;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(139, 111, 71, 0.4);
 }
@@ -2354,7 +2358,7 @@ section {
 }
 
 .page-header {
-  background: linear-gradient(135deg, #8b6f47 0%, #7a9b76 100%);
+  background: linear-gradient(135deg, #FFF0E0 0%, #7a9b76 100%);
   padding: 60px 40px;
   text-align: center;
 }
@@ -2383,7 +2387,7 @@ section {
 .value-card,
 .commitment-item,
 .faq-item {
-  background: #ffffff;
+  background: #F9FAFB;
   padding: 24px;
   border-radius: 12px;
   box-shadow: var(--shadow);
@@ -2431,7 +2435,7 @@ section {
 }
 
 .testimonial-card {
-  background: #ffffff;
+  background: #F9FAFB;
   padding: 32px;
   border-radius: 12px;
   box-shadow: var(--shadow);
@@ -2457,7 +2461,7 @@ section {
 }
 
 .cta-section {
-  background: linear-gradient(135deg, #7a9b76 0%, #8b6f47 100%);
+  background: linear-gradient(135deg, #7a9b76 0%, #FFF0E0 100%);
   text-align: center;
   padding: 80px 40px;
 }
@@ -2469,14 +2473,14 @@ section {
   font-size: 22px;}
 
 .cta-section .btn-primary {
-  background: #ffffff;
+  background: #F9FAFB;
   color: var(--primary-color);
   border-color: #ffffff;
   margin-top: 1rem;
 }
 
 .cta-section .btn-primary:hover {
-  background: #f0f0f0;
+  background: #F9FAFB;
   border-color: #f0f0f0;
 }
 
@@ -2543,7 +2547,7 @@ section {
 }
 
 .contact-info {
-  background: #ffffff;
+  background: #FFF0E0;
   padding: 32px;
   border-radius: 12px;
   box-shadow: var(--shadow);
@@ -2584,7 +2588,7 @@ section {
 }
 
 .contact-form-container {
-  background: #ffffff;
+  background: #FFF0E0;
   padding: 32px;
   border-radius: 12px;
   box-shadow: var(--shadow);
@@ -2957,7 +2961,7 @@ img, picture, figure {
 
     /* Legal Footer Styles - Header Colors */
     .legal-footer {
-      background-color: #f2f2f2;
+      background-color: #FFF0E0;
       color: #1a1a1a;
       padding: 20px 0;
       font-size: 16px;
@@ -3174,8 +3178,8 @@ img, picture, figure {
 
 /* Cookie Consent Customizations */
 :root {
-  --cc-btn-primary-bg: #3b82f6;
-  --cc-btn-primary-border: #3b82f6;
+  --cc-btn-primary-bg: #d4a574;
+  --cc-btn-primary-border: #d4a574;
   --cc-btn-primary-hover-bg: #2269dd;
 }
 
@@ -3365,7 +3369,7 @@ img, picture, figure {
 .mic-access-tool-box-header,
 div[id*="mic-access-tool-box"] header,
 div[id*="mic-access-tool-box"] .header {
-  background: #f2f2f2 !important;
+  background: #FFF0E0 !important;
   color: white !important;
 }
 
@@ -3402,7 +3406,7 @@ div[id*="mic-access-tool-box"] button:hover {
 #mic-access-tool-box button[title*="Reset"],
 #mic-access-tool-box [class*="reset"],
 div[id*="mic-access-tool-box"] button[class*="reset"] {
-  background: #f2f2f2 !important;
+  background: #FFF0E0 !important;
   color: white !important;
 }
 
@@ -3865,3 +3869,48 @@ body.zappy-edit-mode .zappy-editable-video-bg {
     font-size: 1.05rem;
   }
 }
+
+/* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
+/* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
+/* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
+
+@media (max-width: 768px) {
+  /* RTL Mobile Toggle (hamburger) - positioned on RIGHT */
+  /* Using multiple parent selectors for higher specificity */
+  html[dir="rtl"] .navbar .mobile-toggle,
+  html[dir="rtl"] nav .mobile-toggle,
+  html[dir="rtl"] header .mobile-toggle,
+  html[dir="rtl"] .nav-container .mobile-toggle,
+  html[dir="rtl"] .mobile-toggle {
+    left: auto !important;
+    right: 15px !important;
+  }
+  
+  /* RTL Phone Button - positioned on LEFT */
+  html[dir="rtl"] .navbar .phone-header-btn,
+  html[dir="rtl"] nav .phone-header-btn,
+  html[dir="rtl"] header .phone-header-btn,
+  html[dir="rtl"] .nav-container .phone-header-btn,
+  html[dir="rtl"] .phone-header-btn {
+    left: 15px !important;
+    right: auto !important;
+  }
+  
+  /* RTL Mobile Menu - slides from RIGHT */
+  html[dir="rtl"] .navbar .nav-menu,
+  html[dir="rtl"] nav .nav-menu,
+  html[dir="rtl"] header .nav-menu,
+  html[dir="rtl"] .nav-container .nav-menu,
+  html[dir="rtl"] .nav-menu {
+    left: auto !important;
+    right: 0 !important;
+  }
+  
+  /* RTL Mobile Menu Links - text align right */
+  html[dir="rtl"] .nav-menu a,
+  html[dir="rtl"] .nav-menu li {
+    text-align: right !important;
+  }
+}
+
+/* ========== END RTL MOBILE NAVBAR FIX ========== */

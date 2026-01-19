@@ -1,6 +1,4 @@
-# אדמאיה — Generative Engine Optimization Map
-
-> A קייטרינג ואירוח business.
+# Business — Generative Engine Optimization Map
 
 ---
 
@@ -51,15 +49,7 @@ Information about WCAG compliance and accessibility features.
 
 # Business Context (for LLM understanding)
 
-## About אדמאיה
-אדמאיה is a business in the קייטרינג ואירוח industry.
-
-## Target Audience
-מנחי ריטריטים וסדנאות התפתחות, אנשים שמחזיקים מרחבים של ריפוי ואהבה
-
-## Industry
-קייטרינג ואירוח
-
+## About Business
 ---
 
 # Additional Resources

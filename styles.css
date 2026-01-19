@@ -90,7 +90,7 @@ img {
 
 :root {
 --primary-color: #FFF0E0;
-  --secondary-color: #d4a574;
+  --secondary-color: #FFD099;
   --accent-color: #7a9b76;
   --bg-white: #d4a574;
   --text-color: #4A4A4A;
@@ -690,7 +690,7 @@ section {
 .form-group select,
 .form-group textarea {
   padding: 12px;
-  border: 1px solid #d4a574;
+  border: 1px solid #FFD099;
   border-radius: 6px;
   font-family: inherit;
   font-size: 16px;
@@ -1247,8 +1247,8 @@ img, picture, figure {
 
 /* Cookie Consent Customizations */
 :root {
-  --cc-btn-primary-bg: #d4a574;
-  --cc-btn-primary-border: #d4a574;
+  --cc-btn-primary-bg: #FFD099;
+  --cc-btn-primary-border: #FFD099;
   --cc-btn-primary-hover-bg: #2269dd;
 }
 
@@ -2028,7 +2028,7 @@ img {
 
 :root {
   --primary-color: #FFF0E0;
-  --secondary-color: #d4a574;
+  --secondary-color: #FFD099;
   --accent-color: #7a9b76;
   --bg-white: #d4a574;
   --text-color: #4A4A4A;
@@ -2621,7 +2621,7 @@ section {
 .form-group select,
 .form-group textarea {
   padding: 12px;
-  border: 1px solid #d4a574;
+  border: 1px solid #FFD099;
   border-radius: 6px;
   font-family: inherit;
   font-size: 16px;
@@ -3178,8 +3178,8 @@ img, picture, figure {
 
 /* Cookie Consent Customizations */
 :root {
-  --cc-btn-primary-bg: #d4a574;
-  --cc-btn-primary-border: #d4a574;
+  --cc-btn-primary-bg: #FFD099;
+  --cc-btn-primary-border: #FFD099;
   --cc-btn-primary-hover-bg: #2269dd;
 }
 

@@ -1,6 +1,4 @@
-# אדמאיה — Generative Engine Optimization Map
-
-> A קייטרינג ואירוח business.
+# Business — Generative Engine Optimization Map
 
 ---
 
@@ -11,7 +9,7 @@ https://adamaya-food.co.il
 אדמאיה מביאה לכם קייטרינג טבעוני לריטריטים עם חוויה קולינרית צבעונית ומזינה. התאימו את התפריט לאירוע שלכם עוד היום!
 
 ### תפריט ומחירים - אדמאיה
-https://adamaya-food.co.il/shop
+https://adamaya-food.co.il/healthy-grocery-store
 תפריט עונתי של אדמאיה - קייטרינג טבעוני לריטריטים וסדנאות. מגוון מנות בריאות, מזינות וצבעוניות המוכנות באהבה. צפו במחירים ובאפשרויות האירוח.
 
 ### קייטרינג טבעוני לריטריטים מותאם אישית — אדמאיה
@@ -33,6 +31,10 @@ https://adamaya-food.co.il/about
 https://adamaya-food.co.il/contact
 צרו קשר עם אדמאיה לקבלת הצעת מחיר לקייטרינג טבעוני לריטריטים וסדנאות. נשמח לתכנן יחד איתכם את התפריט המושלם.
 
+### סדנאת התססה - אדמאיה | סודות המזון החי והבריא
+https://adamaya-food.co.il/fermentation-workshop
+הצטרפו לסדנאת התססה מעשית וחווייתית עם אדמאיה. למדו את סודות המזון החי, פרוביוטיקה טבעית ושימור מזון מסורתי. פרטים מלאים, מחירים והרשמה באתר.
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -51,15 +53,7 @@ Information about WCAG compliance and accessibility features.
 
 # Business Context (for LLM understanding)
 
-## About אדמאיה
-אדמאיה is a business in the קייטרינג ואירוח industry.
-
-## Target Audience
-מנחי ריטריטים וסדנאות התפתחות, אנשים שמחזיקים מרחבים של ריפוי ואהבה
-
-## Industry
-קייטרינג ואירוח
-
+## About Business
 ---
 
 # Additional Resources

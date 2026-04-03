@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One:wght@400&display=swap');
 
 /* Self-hosted fonts (Inter + Rubik for multi-language support) */
 
@@ -99,13 +99,14 @@ img {
   --nav-hover-color: #FFF0E0;
   --shadow: 0 2px 10px rgba(0,0,0,0.1);
 
-  --heading-font: 'Varela Round', sans-serif;
+  --heading-font: 'Secular One', sans-serif;
   --body-font: 'Varela Round', sans-serif;
   --font-family: 'Varela Round', sans-serif;
   --background-color: #d4a574;
   --surface-color: #F9FAFB;
   --text-secondary-color: #8C8C8C;
-}
+
+  --font-heading: 'Secular One', sans-serif;}
 
 .container {
   max-width: 1440px;
@@ -4044,7 +4045,7 @@ body.zappy-edit-mode .zappy-editable-video-bg {
 /* Ensures grids with explicit columns use CSS variable and are responsive on mobile */
 
 /* DESKTOP: Explicit column grids use CSS variable for grid-template-columns */
-/* This rule reads the --zappy-grid-cols CSS variable set in inline styles */
+/* The deployment process ensures --zappy-grid-cols is always set in inline styles */
 [data-zappy-explicit-columns="true"] {
   display: grid !important;
   grid-template-columns: var(--zappy-grid-cols, repeat(2, minmax(0, 1fr))) !important;
@@ -4472,6 +4473,9 @@ section[data-hero-type] {
 /* ========== END HORIZONTAL-PAIR GRID MEDIA FIX ========== */
 
 /* ========== END GRID RESPONSIVE FIX ========== */
+
+/* Footer contact alignment fix */
+.footer-contact li > a { display: flex; align-items: flex-start; gap: inherit; }
 
 
 /* ZAPPY_CONTACT_FORM_LAYOUT_FIX */

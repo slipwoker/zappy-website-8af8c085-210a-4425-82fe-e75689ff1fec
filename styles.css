@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Secular+One:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
 
 /* Self-hosted fonts (Inter + Rubik for multi-language support) */
 
@@ -76,7 +76,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Rubik', sans-serif;
   line-height: 1.7;
   color: #2c1810;
   background: #FFF0E0;
@@ -100,13 +100,15 @@ img {
   --shadow: 0 2px 10px rgba(0,0,0,0.1);
 
   --heading-font: 'Secular One', sans-serif;
-  --body-font: 'Varela Round', sans-serif;
-  --font-family: 'Varela Round', sans-serif;
+  --body-font: 'Rubik', sans-serif;
+  --font-family: 'Rubik', sans-serif;
   --background-color: #d4a574;
   --surface-color: #F9FAFB;
   --text-secondary-color: #8C8C8C;
 
-  --font-heading: 'Secular One', sans-serif;}
+  --font-heading: 'Secular One', sans-serif;
+  --font-primary: 'Rubik', sans-serif;
+  --font-body: 'Rubik', sans-serif;}
 
 .container {
   max-width: 1440px;
@@ -2015,7 +2017,7 @@ body.zappy-edit-mode .zappy-editable-video-bg {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Rubik', sans-serif;
   line-height: 1.7;
   color: #2c1810;
   background: #FFF0E0;

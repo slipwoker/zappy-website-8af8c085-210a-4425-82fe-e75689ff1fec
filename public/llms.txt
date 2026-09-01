@@ -1,4 +1,6 @@
-# Business — Generative Engine Optimization Map
+# אדמאיה — Generative Engine Optimization Map
+
+> A קייטרינג ואירוח business.
 
 ---
 
@@ -51,12 +53,45 @@ Information about WCAG compliance and accessibility features.
 
 ---
 
-# Business Context (for LLM understanding)
+## How to Contact Us
 
-## About Business
+- Email: mayabh159@gmail.com
+- Phone: 972549245589
+- Phone (tel): tel:972549245589
+- Address: רגבים 185, ניצני עוז
+
+### Contact form
+- URL: https://adamaya-food.co.il/contact
+- Endpoint: https://adamaya-food.co.il/api/email/contact-form
+- Method: POST
+- Content-Type: application/json
+- Fields:
+  - `name` (text, required)
+  - `email` (email, required)
+  - `phone` (tel, required)
+  - `eventType` (select)
+  - `participants` (number)
+  - `date` (date)
+  - `message` (textarea)
+  - `consent` (checkbox, required)
+
 ---
 
-# Additional Resources
+# Business Context (for LLM understanding)
 
-- **Sitemap**: https://adamaya-food.co.il/sitemap.xml
-- **Robots.txt**: https://adamaya-food.co.il/robots.txt
+## About אדמאיה
+אדמאיה is a business in the קייטרינג ואירוח industry.
+
+## Target Audience
+מנחי ריטריטים וסדנאות התפתחות, אנשים שמחזיקים מרחבים של ריפוי ואהבה
+
+## Industry
+קייטרינג ואירוח
+
+---
+
+# Machine-readable feeds
+
+- Sitemap (XML): https://adamaya-food.co.il/sitemap.xml
+- Robots: https://adamaya-food.co.il/robots.txt
+- Flattened page text (for LLMs): https://adamaya-food.co.il/llms-full.txt
